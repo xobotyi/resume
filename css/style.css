@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Rubik:400,500,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 8px;
+}
+
+body {
+    font-size: 1.75rem;
+    min-width: calc(100vw - 6rem);
+    min-height: calc(100vh - 8rem);
+    padding: 4rem 3rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+
+html,
+body {
+    background: #c4cacc;
+}
+
+#Resume {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    background: #ededed;
+    color: rgba(0, 0, 0, .87);
+    border-radius: .375rem;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .05), 0 .5rem 1rem rgba(0, 0, 0, .25);
+    flex-wrap: wrap;
+    padding: .05px;
+}
+
+.Resume-Left,
+.Resume-Right {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+}
+
+.Resume-Left {
+    width: 60%;
+    padding-right: 1rem;
+}
+
+.Resume-Right {
+    width: 40%;
+    padding-left: 1rem;
+}
+
+/* IDENTITY */
+.Resume-Identity {
+    display: flex;
+}
+
+.Resume-Identity-Left {
+    flex-grow: 0;
+    margin-right: 3rem;
+}
+
+.Resume-Identity-Right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Resume-Title {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, .65);
+    margin: .5rem 0;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.Resume-Name {
+    font-size: 7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 80%;
+    text-align: left;
+    line-height: 6rem;
+}
+
+.Resume-Occupation {
+    margin: .75rem 0 .5rem;
+    font-weight: 500;
+    font-size: 3rem;
+    color: #387ea0;
+}
+
+.Resume-Image {
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    border-radius: .25rem;
+    overflow: hidden;
+}
+
+.Resume-Image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Info blocks */
+.ResumeBlock {
+    position: relative;
+    margin: 0 0 5rem;
+}
+
+.ResumeBlock:last-child {
+    margin: 0;
+}
+
+.ResumeBlock-Title {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #387ea0;
+    margin: 0 0 2rem;
+    font-size: 3rem;
+    line-height: 1em;
+}
+
+.ResumeBlock-Title:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 15%;
+    height: .25rem;
+    background: rgba(0, 0, 0, .08);
+}
+
+/* Experience */
+.Experience {
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+    margin: 4rem 0 0;
+}
+
+.ProfessionalExperience-Title {
+    display: inline-block;
+    font-weight: 500;
+    color: rgba(0, 0, 0, .54);
+    font-size: 3rem;
+    margin: 1rem 0 1rem 20%;
+}
+
+.ExperienceItem {
+    display: flex;
+}
+
+.ExperienceItem-Left {
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 25%;
+    padding: 2rem;
+    position: relative;
+}
+
+.ExperienceItem-Left:before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: .5rem;
+    height: 100%;
+    background: rgba(0, 0, 0, .1);
+}
+
+.ExperienceItem-Left:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -.25rem;
+    top: 3.125rem;
+    width: 1rem;
+    height: 1rem;
+    background: #387ea0;
+    border-radius: 1rem;
+    box-shadow: 0 0 0 .5rem #ededed;
+}
+
+.ExperienceItem-Right {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 2rem;
+}
+
+.ExperienceItem-Company {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0 0 .5rem;
+}
+
+.ExperienceItem-Position {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0 0 .5rem;
+    color: #387ea0;
+}
+
+.ExperienceItem-Description {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, .75);
+}
+
+.ExperienceItem-Period {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: rgba(0, 0, 0, .54);
+    margin-top: .625rem;
+}
+
+/* About */
+.AboutLine {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 0 .75rem;
+    text-decoration: none;
+}
+
+.AboutLine.single {
+    align-items: center;
+    align-content: center;
+}
+
+.AboutLine-Name {
+    font-weight: 500;
+    min-width: 25%;
+}
+
+.AboutLine-Icon {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 3rem;
+    margin-right: .25rem;
+    color: rgba(0, 0, 0, .65);
+    font-size: 1.75rem;
+}
+
+.AboutLine-Value {
+    font-size: 1.75rem;
+    line-height: 2rem;
+    color: rgba(0, 0, 0, .75);
+}
+
+/*Skills*/
+.Skills-Wrapper {
+    position: relative;
+    width: 80%;
+}
+
+.SkillItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: .75rem;
+}
+
+.SkillItem-Bar {
+    background: #387ea0;
+    border-radius: .375rem;
+    margin-right: 1rem;
+    height: 4rem;
+}
+
+.SkillItem-Name {
+    position: absolute;
+    align-self: center;
+    left: 2rem;
+    color: rgba(255, 255, 255, .87);
+    font-weight: 500;
+}
+
+/* Knowledges */
+.KnowledgeItem {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 1.5rem;
+}
+
+.KnowledgeItem-Icon {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 3rem;
+    margin-right: 1rem;
+    color: rgba(0, 0, 0, .65);
+    font-size: 2.5rem;
+}
+
+.KnwoledgeItem-Name {
+    flex-grow: 1;
+    font-weight: 500;
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+}
+
+.KnwoledgeItem-Description {
+    width: 100%;
+    padding-left: .25rem;
+    color: rgba(0, 0, 0, .75);
+    margin-top: .5rem;
+}
+
+.ResumeBottom {
+    width: 100%;
+    position: relative;
+    padding: 3rem 5rem 5rem;
+    background: rgba(0, 0, 0, .05);
+    display: flex;
+}
+
+.ResumeBottom-Left, .ResumeBottom-Right {
+    display: flex;
+    flex-direction: column;
+}
+
+.ResumeBottom-Left {
+    flex-grow: 1;
+}
+
+.ResumeBottom-Right {
+    min-width: 25%;
+}
+
+.ResumeBottom-Title {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0 0 2rem;
+    font-size: 2.5rem;
+    line-height: 1em;
+}
+
+.ResumeBottom-Title:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 15%;
+    height: .25rem;
+    background: rgba(0, 0, 0, .08);
+}
+
+.InterestItem {
+    display: flex;
+    margin: 0 0 1rem;
+    align-items: center;
+}
+
+.InterestItem-Icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    width: 3rem;
+    color: rgba(0, 0, 0, .75);
+    margin-right: .5rem;
+    margin-toP: -.25rem;
+}
+
+.InterestItem-Name {
+    line-height: 2rem;
+}
+
+.LinkItem {
+    display: flex;
+    margin: 0 0 1.5rem;
+    align-items: center;
+    color: #387ea0;
+    text-decoration: none;
+}
+
+.LinkItem-Icon {
+    width: 6rem;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LinkItem:hover .LinkItem-Text {
+    text-decoration: underline;
+}
