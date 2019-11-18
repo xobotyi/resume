@@ -124,12 +124,22 @@ body {
 
 .ResumeBlock-Title {
     position: relative;
+    display: flex;
+    align-items: center;
     text-transform: uppercase;
     font-weight: 500;
     color: #387ea0;
     margin: 0 0 2rem;
     font-size: 3rem;
     line-height: 1em;
+}
+
+.ResumeBlock-Title-Sub {
+    margin-left: 2rem;
+    font-size: 1.75rem;
+    line-height: 1em;
+    margin-top: 1px;
+    color: rgba(0, 0, 0, .4);
 }
 
 .ResumeBlock-Title:after {
@@ -309,14 +319,14 @@ body {
     font-size: 2.5rem;
 }
 
-.KnwoledgeItem-Name {
+.KnowledgeItem-Name {
     flex-grow: 1;
     font-weight: 500;
     line-height: 2.5rem;
     font-size: 2.5rem;
 }
 
-.KnwoledgeItem-Description {
+.KnowledgeItem-Description {
     width: 100%;
     padding-left: .25rem;
     color: rgba(0, 0, 0, .75);
