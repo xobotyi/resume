@@ -414,3 +414,48 @@ body {
 .LinkItem:hover .LinkItem-Text {
     text-decoration: underline;
 }
+
+@media print {
+    @page {
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important; /* Chrome, Safari, Edge */
+        color-adjust: exact !important; /*Firefox*/
+    }
+
+    body {
+        min-width: unset;
+        min-height: unset;
+        padding: unset;
+        background: transparent;
+    }
+
+    #Resume {
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        max-width: none;
+        display: block;
+        background: #fff;
+    }
+
+    .Resume-Left {
+        width: 100%;
+        padding-right: 5rem;
+        align-items: center;
+    }
+
+    .Resume-Right {
+        width: 100%;
+        padding-left: 5rem;
+        align-items: center;
+        page-break-inside: avoid;
+    }
+
+    .ResumeBlock {
+        width: 60vw;
+    }
+}
